@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 const Header = () => <h2>Header</h2>;
 const Dashboard = () => <h2>Dashboard</h2>;
@@ -11,7 +11,10 @@ const App = () => {
         <div>
             <BrowserRouter>
                 <div>
-                    <Route paht="/" component={Landing} />
+                    <Header />
+                    <Route exact path="/" component={Landing} />
+                    <Route exact path="/surveys" component={Dashboard} />
+                    <Route path="/surveys/new" component={SurveyNew} />
                 </div>
             </BrowserRouter>
         </div>
